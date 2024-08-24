@@ -5,12 +5,10 @@ import (
 	"crypto/rsa"
 	"log"
 	"time"
-
 	"github.com/gofiber/fiber/v2"
-
 	"github.com/golang-jwt/jwt/v5"
-
 	jwtware "github.com/gofiber/contrib/jwt"
+	"github.com/gofiber/template/html/v2"
 )
 
 var (
@@ -20,8 +18,20 @@ var (
 	privateKey *rsa.PrivateKey
 )
 
+func home(c *fiber.Ctx) error {
+    return c.Render("home", fiber.Map{})
+}
+
 func main() {
-	app := fiber.New()
+	config := fiber.Config{
+		Views: html.New("./views", ".html"),
+	}
+	app := fiber.New(config)
+
+	app.Static("/", "./public")
+	app.Get("/", home) // ROTA ABERTA PRA QUALQUER UM
+
+
 
 	// Just as a demo, generate a new private/public key pair on each run. See note above.
 	rng := rand.Reader
@@ -32,10 +42,7 @@ func main() {
 	}
 
 	// Login route
-	app.Post("/login", login)
-
-	// Unauthenticated route
-	app.Get("/", accessible)
+	app.Post("/login", login) // RETORNA JSON COM O TOKEN SE O USUÁRIO E SENHA ESTIVER CORRETOS
 
 	// JWT Middleware
 	app.Use(jwtware.New(jwtware.Config{
@@ -46,7 +53,7 @@ func main() {
 	}))
 
 	// Restricted Routes
-	app.Get("/restricted", restricted)
+	app.Get("/restricted", restricted) // ROTA PROTEGIDA POR TOKEN
 
 	app.Listen(":3000")
 }
@@ -78,10 +85,6 @@ func login(c *fiber.Ctx) error {
 	}
 
 	return c.JSON(fiber.Map{"token": t})
-}
-
-func accessible(c *fiber.Ctx) error {
-	return c.SendString("Accessible")
 }
 
 func restricted(c *fiber.Ctx) error {
