@@ -4,7 +4,120 @@
     margin: 0;
 }
 
+html, body {
+    font-family: "Kumbh Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings:"YOPQ" 300;
+}
+
 .header{
-    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.limite-width{
+    width: 1280px;
+}
+
+.titulo-topo{
+    font-size: 50px;
+    font-weight: 300;
+    padding-top: 13px;
+}
+
+.titulo-topo span{
+    color: #C80000;
+}
+
+.barra{
+    border-bottom: 1px solid #E6E6E6;
+    padding-top: 10px;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding-top: 10px;
+    font-size: 24px;
+}
+
+.menu li a{
+    color: black;
+    text-decoration: none;
+}
+
+.menu li a.active{
+    border-bottom: 3px solid #C80000;
+    padding-bottom: 9px;
+    font-weight: 500;
+}
+
+.corpo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'KoHo', sans-serif;
+}
+
+.titulo-postagem{
+    padding-top: 30px;
+    font-family: "KoHo";
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.subtitulo-postagem{
+    padding-top: 15px;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.autor-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+}
+
+.autor-image-description-container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.autor-nome{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.autor-foto{
+    clip-path: circle();
+    width: 100px;
+    height: 100px;
+}
+
+.foto-de-destaque{
+    width: 100%;
+}
+
+.divisao-em-dois{
     display: flex;
 }
+
+.texto{
+    flex: 1;
+}
+
+.propaganda{
+    flex: .5;
+}
+
+.introducao{
+    font-size: 20px;
+    font-weight: 500;
+}
+

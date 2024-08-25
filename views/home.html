@@ -6,48 +6,71 @@
     <title>Desenvolva Total - Blog</title>
     <meta name="description" content="Blog com postagens sobre alimentação, saúde, tecnologia, bitcoin, recomendações e muito mais.">
     <link rel="stylesheet" href="/styles/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Kumbh+Sans:wght,YOPQ@100..900,167&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
-        <h1>Desenvolva Total - Blog</h1>
-        <nav>
-            <ul>
-                <li><a href="/">Últimas postagens</a></li>
-                <li><a href="/alimentacao">Alimentação</a></li>
-                <li><a href="/saude">Saúde</a></li>
-                <li><a href="/tecnologia">Tecnologia</a></li>
-                <li><a href="/bitcoin">Bitcoin</a></li>
-                <li><a href="/recomendacoes">Recomendações</a></li>
-                <li><a href="/sobre">Sobre</a></li>
-            </ul>
-        </nav>
+        <div class="limite-width">
+            <h1 class="titulo-topo">Desenvolva Total - <span>Blog</span></h1>
+            <div class="barra"></div>
+            <nav>
+                <ul class="menu">
+                    <li><a class="active" href="/">Últimas postagens</a></li>
+                    <li><a href="/alimentacao">Alimentação</a></li>
+                    <li><a href="/saude">Saúde</a></li>
+                    <li><a href="/tecnologia">Tecnologia</a></li>
+                    <li><a href="/bitcoin">Bitcoin</a></li>
+                    <li><a href="/recomendacoes">Recomendações</a></li>
+                    <li><a href="/sobre">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <h1>Bitcoin, ouro do século XXI ?</h1>
-        <p>Quais características fazem o bitcoin valer centenas de milhares de reais?</p>
-        
-        <section class="autor-info">
-            <img src="/images/autor.jpg" alt="Foto do autor" class="autor-foto">
-            <div class="autor-detalhes">
-                <p class="autor-nome">Piêtro Braga</p>
-                <p class="data-publicacao">Publicado em: 24 de agosto de 2024</p>
-            </div>
-        </section>
+    <div class="barra"></div>
 
-        <section class="imagem-em-destaque">
-            <img src="/images/bitcoin.jpg" alt="Foto do bitcoin" class="foto-de-destaque">
-        </section>
-        
-        <section class="cronometro">
-            <h2>Cronômetro</h2>
-            <div class="tela-principal">
-                <div class="tamanho-limitado centralizar">
-                    <!-- Conteúdo do cronômetro aqui -->
+    <main class="corpo">
+        <div class="limite-width">
+            <h1 class="titulo-postagem">Bitcoin, ouro do século XXI ?</h1>
+            <p class="subtitulo-postagem">Quais características fazem o bitcoin valer centenas de milhares de reais?</p>
+            
+            <div class="barra"></div>
+
+            <section class="autor-info">
+                <div class="autor-image-description-container">
+                    <img src="/images/autor.jpg" alt="Foto do autor" class="autor-foto">
+                    <p class="autor-nome">Piêtro Braga</p>
+                </div>
+               
+                <div class="data-publicacao">
+                    <p class="data-publicacao">24 de agosto de 2024</p>
+                </div>
+            </section>
+
+            <section class="imagem-em-destaque">
+                <img src="/images/bitcoin2.jpg" alt="Foto do bitcoin" class="foto-de-destaque">
+            </section>
+            
+
+            <div class="divisao-em-dois">
+                <div class="texto">
+                    <section class="introducao">
+                        <p>Lorem Ipsum is simply dummy text of the printing and  typesetting industry. Lorem Ipsum has been the industry's standard dummy  text ever since the 1500s, when an unknown printer took a galley of  type and scrambled it to make a type specimen book. It has survived not  only five centuries, but also the leap into electronic typesetting,  remaining essentially unchanged. It was popularised in the 1960s with  the release of Letraset sheets containing Lorem Ipsum passages, and more  recently with desktop publishing software like Aldus PageMaker  including versions of Lorem Ipsum.</p>
+                    </section>
+                </div>
+                <diva class="propaganda">
+                    ............
                 </div>
             </div>
-        </section>
+         
 
+
+        </div>
     </main>
 
     <footer>
